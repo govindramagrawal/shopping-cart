@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+
+{% block title %}Product List{% endblock %}
+{% block content %}
+
+<p>I am product list content.</p>
+<p>My product name is {{ product.name}} and price is {{ product.price }} and description is {{ product.description}} and availability is {{ product.is_available }}</p>
+<p>My product brand is {{ product.product.brand }}</p>
+<p>My product has {{product.list_of_features | length}} feature{{product.list_of_features | pluralize}}.</p>
+<p> 1st feature of my product is {{ product.list_of_features.0 }} and 2nd feature of my product is {{ product.list_of_features.1 }}.
+
+
+{% if product.age <= 19 %}
+    <p>My product is for teenagers.</p>
+{% else %}
+    <p>My product is for adults.</p>
+{% endif %}
+
+{% for feature in product.list_of_features %}
+    <p>My product feature is {{ feature }}</p>
+{% endfor %}
+
+{% endblock %}

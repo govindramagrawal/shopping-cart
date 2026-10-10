@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Shopping Cart</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    {% include "navbar.html" %}
+    <main class="about-page">
+        <section class="about-hero" aria-labelledby="about-title">
+            <p class="about-eyebrow">A little about us</p>
+            <h1 id="about-title">Shopping made a little simpler.</h1>
+            <p class="about-intro">
+                We bring products together in one place so you can spend less time
+                searching and more time finding what you need.
+            </p>
+            <a class="about-button" href="{% url 'home' %}">Explore the store</a>
+        </section>
+
+        <section class="about-details" aria-label="What matters to us">
+            <article class="about-card">
+                <span class="about-card-number" aria-hidden="true">01</span>
+                <h2>Easy to explore</h2>
+                <p>Browse products and details in a clear, straightforward way.</p>
+            </article>
+            <article class="about-card">
+                <span class="about-card-number" aria-hidden="true">02</span>
+                <h2>Built around you</h2>
+                <p>A simple shopping experience should work for everyone, on any device.</p>
+            </article>
+            <article class="about-card">
+                <span class="about-card-number" aria-hidden="true">03</span>
+                <h2>Your voice counts</h2>
+                <p>Your feedback helps make every visit to the store better.</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
